@@ -11,7 +11,7 @@ try {
     echo "Base de données 'storehoop_db' créée ou déjà existante.\n";
 
     // Se connecter à la base nouvellement créée
-    $pdo->exec("USE podcast_db");
+    $pdo->exec("USE storehoop_db");
 
     // Créer la table
     $sql = "CREATE TABLE IF NOT EXISTS podcasts (
