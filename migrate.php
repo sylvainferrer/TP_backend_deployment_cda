@@ -7,8 +7,8 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Créer la base de données
-    $pdo->exec("CREATE DATABASE IF NOT EXISTS podcast_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-    echo "Base de données 'podcast_db' créée ou déjà existante.\n";
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS storehoop_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    echo "Base de données 'storehoop_db' créée ou déjà existante.\n";
 
     // Se connecter à la base nouvellement créée
     $pdo->exec("USE podcast_db");
