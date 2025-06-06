@@ -4,13 +4,13 @@ pipeline {
 
     stages {
         stage('Git clone') {
-            agent { label 'agent-lftp' }
+            agent { label 'agent-php' }
             steps {
                 git branch: 'main', url: 'https://github.com/sylvainferrer/TP_backend_deployment_cda.git'
             }
         }
         stage('Copy server') {
-            agent { label 'agent-lftp' }
+            agent { label 'agent-php' }
             steps {
                 sh '''
                    lftp -u storehoop,"$Mdp" "$ftp" -e "mirror -R ${WORKSPACE}/ www/ ; quit"
